@@ -1,0 +1,162 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+  background-color: #fff;
+}
+
+.positive {
+  color: #04aa6d;
+}
+
+.negative {
+  color: #aa0404;
+}
+
+.valutes {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.valutes table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.valutes td,
+.valutes th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.valutes tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.valutes tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.valutes th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.tooltip {
+  position: fixed;
+  padding: 10px;
+  background-color: #003521;
+  border-radius: 5px;
+  border: 1px solid #002014;
+}
+
+.tooltip .text {
+  padding: 3px;
+  background-color: #f2f2f2;
+  font-size: 13px;
+}
+
+.modal-placeholder {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.397);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal-place {
+  border: 1px solid #003521;
+  background-color: #f2f2f2;
+  min-width: 450px;
+}
+
+.modal-title {
+  background-color: #fff;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #04aa6d;
+}
+
+.modal-body {
+  padding: 15px 20px;
+  border-bottom: 1px solid #003521;
+  max-height: 450px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+}
+
+.valute-list {
+  padding: 3px;
+}
+
+.valute-block {
+  background-color: #f7f7f7;
+  padding: 10px 15px;
+  font-size: 13px;
+  color: #707070;
+  border-bottom: 1px solid #d5d5d5;
+  display: flex;
+}
+
+.valute-block span {
+  flex: 1;
+}
+
+.valute-block span.per {
+  font-weight: bold;
+  width: 70px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 0px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f2f2f2;
+  background-color: #04aa6d;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.loading-text {
+  padding: 10px;
+  font-weight: bold;
+  color: #04aa6d;
+  font-size: 16px;
+  background-color: #d5d5d5;
+  border: 1px solid #003521;
+}
