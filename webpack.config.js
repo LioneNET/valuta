@@ -14,6 +14,9 @@ module.exports = {
   devServer: {
     static: './dist'
   },
+  optimization: {
+    minimize: true
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/app.html'),
