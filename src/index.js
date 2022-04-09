@@ -37,7 +37,6 @@ const fetchLastDayDatas = async () => {
   const loading = templateLoading()
   
   if (prevValute.length) {
-    console.log('already load', prevValute)
     return prevValute
   }
 
@@ -47,7 +46,6 @@ const fetchLastDayDatas = async () => {
       const response = await axios(next === null ? `https://www.cbr-xml-daily.ru/daily_json.js` : next)
       next = response.data.PreviousURL
       dates.push({ ...response.data })
-      console.log('loading', response)
     } catch {
       console.error('error')
     }
@@ -142,11 +140,14 @@ const loadLastDaysValutes = async el => {
   }
 }
 
-const tableTemplate = (Valute) => {
+const tableTemplate = (Valute, Date) => {
   const $body = document.createElement('div')
   const $table = document.createElement('table')
   const tooltip = templateTooltip()
   $body.className = 'valutes'
+  $body.innerHTML = `
+    <div class="course_today">Курс валют на: ${dateFormat(Date, 'dd.mm.yyyy')}</div>
+  `;
   $table.innerHTML = `
     <tr>
       <th>Код валюты</th>
@@ -190,8 +191,8 @@ const tableTemplate = (Valute) => {
 const render = async ($node) => {
   try {
     const res1 = await axios.get('https://www.cbr-xml-daily.ru/daily_json.js')
-    const { Valute } = res1.data
-    $main.appendChild(tableTemplate(Valute))
+    const { Valute, Date } = res1.data
+    $main.appendChild(tableTemplate(Valute, Date))
   } catch {
     console.log('Ошибка загрузки')
   }

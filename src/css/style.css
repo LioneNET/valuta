@@ -160,3 +160,14 @@ body {
   background-color: #d5d5d5;
   border: 1px solid #003521;
 }
+
+.course_today {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  background-color: #04aa6d;
+  color: #efffff;
+  text-align: center;
+}
